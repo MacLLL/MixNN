@@ -11,7 +11,7 @@ This repository is the official implementation of "Mitigating Noisy Supervision 
 ## Usage
 For example, to train the model using SELC under class-conditional noise in the paper, run the following commands:
 ```train
-python3 XXX.py
+python3 train_cifar_with_MixNN.py
 ```
 It can config with noise_mode, noise_rate, batch size and epochs. Similar commands can also be applied to other label noise scenarios.
 ### Hyperparameter options:
@@ -19,8 +19,8 @@ It can config with noise_mode, noise_rate, batch size and epochs. Similar comman
 --data_path             path to the data directory
 --noise_mode            label noise model(e.g. sym, asym)
 --r                     noise level (0.0, 0.2, 0.4, 0.6, 0.8)
---loss                  loss functions (e.g. SELCLoss)
---alpha                 alpha in XXX
+--loss                  loss functions (e.g. ANNLoss)
+--alpha                 alpha in target estimation
 --batch_size            batch size
 --lr                    learning rate
 --lr_s                  learning rate schedule
